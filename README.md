@@ -18,13 +18,7 @@ A mobile car rental browsing application built with Flutter, inspired by the Boo
 
 ---
 
-## Screenshots
 
-| Splash | Home | Car Details | Sidebar |
-|--------|------|-------------|---------|
-| `[screenshot]` | `[screenshot]` | `[screenshot]` | `[screenshot]` |
-
-> Replace placeholders with actual screenshots once available.
 
 ---
 
