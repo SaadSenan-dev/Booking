@@ -32,10 +32,42 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           iconSize: 30,
         ),
         IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.notifications_none_rounded),
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text("Notifications"),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      ListTile(
+                        leading: Icon(Icons.notifications),
+                        title: Text("New car added"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.notifications),
+                        title: Text("Discount available"),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.notifications),
+                        title: Text("Booking confirmed"),
+                      ),
+                    ],
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text("Close"),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+          icon: const Icon(Icons.notifications_none_rounded),
           iconSize: 30,
-        ),
+        )
       ],
     );
   }

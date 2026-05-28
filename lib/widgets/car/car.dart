@@ -27,7 +27,9 @@ class CarCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (_) => CarDetailsScreen(),
+            builder: (_) => CarDetailsScreen(
+              car: car,
+            ),
           ),
         );
       },

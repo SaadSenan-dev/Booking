@@ -1,4 +1,4 @@
-import 'package:ex_2/screens/splash_screen.dart';
+import 'package:ex_2/screens/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
