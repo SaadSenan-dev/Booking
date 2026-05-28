@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
 
@@ -10,8 +12,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: IconThemeData(color: Colors.white),
       backgroundColor: Colors.blue[900],
       leading: IconButton(
-        onPressed: () {},
-        icon: Icon(Icons.mark_email_unread_outlined),
+        onPressed: () {
+          scaffoldKey.currentState?.openDrawer();
+        },
+        icon: Icon(Icons.menu),
         iconSize: 30,
       ),
       centerTitle: true,
